@@ -151,7 +151,7 @@ def predict(model_type_chat, user_input, model):
         
         model_type_chat = st.session_state.messenger_bot_chat
         
-    response = openai.ChatCompletion.create(
+    response = openai.completions.create(
         model=model,
         messages=model_type_chat,
         temperature = .1)
